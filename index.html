@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Pętle - Code Carrots JS</title>
+  <title>Tablice - Code Carrots JS</title>
 
   <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
   <meta name="author" content="Hakim El Hattab">
@@ -43,229 +43,218 @@
 				<section>
           <img src='cc.jpg' height="200" width="200" >
           <h1>Code Carrots</h1>
-          <h3>Kurs JavaScript - pętle</h3>
+          <h3>Kurs JavaScript - tablice</h3>
           <p>
             <small><a href="mailto:meksionek@gmail.com">Gosia Ksionek</a></small>
           </p>
         </section>
-
+      <section>
         <section>
-          <h2>Wyniki ankiety</h2>
+          <h2>Czym jest TABLICA?</h2>
 
           <p class="fragment roll-in">
-            Bardzo dziękujemy za wypełnienie, za wszystkie uwagi, a zwłaszcza te miłe :) 
+            Obiekt służący do przechowywania kilku wartości.
           </p>
           <p class="fragment roll-in">
-            Będą dodatkowe zadania dla osób, które już zrobiły, o podobnym poziomie trudności
+            Wartości nie muszą być tego samego typu. 
           </p>
-
           <p class="fragment roll-in">
-            Będzie wyjście integracyjne :) 
+            Wartości w tablicy numerowane są od 0.
           </p>
         </section>
 
         <section>
-          <h2>Praca domowa</h2>
-          <p>
-            Uwagi?
-          </p>
-          <p>
-            Pytania?
-          </p>
-          <p>
-            Wątpliwości?
-          </p>
+          <h2>Tworzenie tablicy</h2>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red']
+              </code>
+          </pre>
+          <pre>
+              <code >
+                var colors = new Array('white', 'black', 'red')
+              </code>
+          </pre>
+
         </section>
-
-
         <section>
-          <h2>Pamiętacie funkcje?</h2>
-          <p>
-            Jak się je tworzy?
-          </p>
-          <p>
-            Co to są funkcje z argumentami?
-          </p>
-          <p>
-            A kto przypomni konstrukcję instrukcji warunkowych?
-          </p>
-        </section>
-
-        <section>
-          <section>
-            <h2>Czym jest pętla?</h2>
-            <p>
-              Jedna z podstawowych struktur programowania. 
-            </p>
-            <p>
-              Służą nam do powtarzania czynności wiele razy.
-            </p>
-            <p class = "fragment roll-in"> Przykłady... </p>
-          </section>
-
-          <section>
-            <h2>Jak działa pętla</h2>
-            <p>
-              Pętla powtarza wykonanie bloku kodu gdy określony warunek jest spełniony. 
-            </p>
-            <p>
-              Tym warunkiem może to być: 
-              <ul>
-                <li>koniec tablicy, na której działamy</li>
-                <li>ewaluacja określonej wartości do false</li>
-              </ul>
-            </p>
-          </section>
-        </section>
-
-
-        <section>
-          <section>
-            <h2> Pętla FOR </h2>
-            <p> Służy do powtarzania bloku kodu daną liczbę razy</p>
-            <pre>
-              <code contenteditable='true'>
-                for (var i = 0; i<10; i++) {
-                    console.log(i);
-                };
+          <h2>Deklarowanie, że pod daną zmienną będzie umieszczona tablica</h2>
+          <pre>
+              <code >
+                var colors;
+                colors = [];
+              </code>
+          </pre>
+          <pre>
+              <code >
+                var colors = new Array();
               </code>
           </pre>
 
         </section>
 
-        <section>
-          <h2> Zadania </h2>
-          <p>Stwórz ręcznie tablicę złożoną z 10 elementów i wyświetl je w konsoli po kolei</p>
-          <p>Wyświetl w konsoli liczby parzyste od 0 do 100</p>
-          <p>Wyświetl w konsoli liczby od 100 do 1</p>
-          <p>* Stwórz ręcznie tablicę, a następnie przy pomocą pętli stwórz tablicę zawierającą te same elementy w odwrotnej kolejności. Wyświetl je w alercie. <p>
-            <p>** Za pomocą pętli policz silnię z dowolnej, podanej liczby </p>
-        </section>
-
       </section>
 
         <section>
-
-          <section>
-            <h2> Pętla FOR ... IN </h2>
-            <p> Służy do przechodzenia przez wszystkie elementy danego obiektu</p>
-            <aside class = 'notes'>
-              przypomnieć czym są obiekty. Obiekty to struktury zawierające dane (i potem metody do działania na tych danych). konstrukcja klucz wartość
-            </aside>
-            <pre class = 'long'>
-              <code contenteditable='true'>
-            var codeCarrots = {nazwa: 'CodeCarrots', typ: 'warsztaty', liczbaUczestników: 23}
-            for (var klucz in codeCarrots) {
-                console.log( 'Wartość właściwości: "' + klucz + '" to: ', codeCarrots[klucz] );
-            cr}
-            </code>
+          <h4>Odwoływanie się do konkretnego elementu tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors[0];
+                colors.item(2);
+              </code>
           </pre>
+          <p> Elementy tablicy numerowane są od 0. </p>
+          <p> W powyższym przykładzie pod indeksem<br> 0 znajduje się wartość 'white' <br> 1 wartość 'black' <br> 2 wartość 'red'</p>
+
+        </section>
+
+      <section>
+        <section>
+          <h1>Metody służące do operowania na tablicach</h1>
+          
+        </section>
+         <section>
+          <h4>Przypisywanie wartości danemu elementowi tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors[3] = 'blue'
+                colors
+                ['white', 'black', 'red', 'blue'];
+              </code>
+          </pre>
+          <p> W ten sposób możemy przypisać bądź zmienić wartość konkretnemu elementowi tablicy, także temu, którego jeszcze nie ma :)  </p>
+
+        </section>
+
+         <section>
+          <h4>Dodawanie elementów do tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors.push('blue')
+                colors
+                ['white', 'black', 'red', 'blue'];
+              </code>
+          </pre>
+          <p> W ten sposób dodajemy element (jeden lub kilka) na koniec tablicy. </p>
+
+        </section>
+        <section>
+
+        <h4>Dodawanie elementów do tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors.unshift('blue')
+                colors
+                ['blue','white', 'black', 'red'];
+              </code>
+          </pre>
+          <p> W ten sposób dodajemy element (jeden lub kilka) na początek tablicy. </p>
+
         </section>
 
         <section>
-         <h2> Zadania </h2> 
-         <p>Stwórz obiekt i wyświetl wszystkie jego elementy w formacie: "(klucz) wynosi (wartość)"</p>
-         <p>* stwórz tablicę zawierającą 3 obiekty. Wyświetl wszystkie elementy wszystkich obiektów, zaznaczając którego obiektu elementy są wyświetlone </p>
-       </section>
 
-     </section>
+        <h4>Usuwanie elementów z tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors.pop()
+                colors
+                ['white', 'black'];
+              </code>
+          </pre>
+          <p> W ten sposób usuwamy ostatni element z końca tablicy. </p>
 
-     <section>
-      <section>
-        <h2>PĘTLA WHILE</h2>
-        <p>Służy do powtarzania bloku kodu do czasu, kiedy dany warunek przestanie być prawdziwy</p>
-        <pre>
-          <code contenteditable='true'>
-            var i = 0;
-            var array = [];
-            while ( i<10 ) {
-                array[i] = i;
-                i++;
-            }
-          console.log(array);
-        </code>
-      </pre>
-    </section>
+        </section>
 
-    <section>
-      <h2>Zadania </h2>
-      <p>Stwórz tablicę złożoną z 10 kolejnych wielokrotności liczby 5 za pomocą pętli while</p>
-      <p>Wyświetl w konsoli liczby parzyste od 0 do 100 za pomocą pętli while</p>
-      <p>* Pobieraj od użytkownika liczby tak długo, aż wpiszę liczbę większą niż 50. Wtedy wyświetl tablicę złożoną z wpisanych dotychczas liczb na stronie</p>
+        <section>
 
-    </section>
-  </section>
+        <h4>Usuwanie elementów z tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors.shift()
+                colors
+                ['black', 'red'];
+              </code>
+          </pre>
+          <p> W ten sposób usuwamy pierwszy element z tablicy. </p>
 
-  <section>
-    <section>
-      <h2>PĘTLA DO WHILE</h2>
-      <p>Służy do powtarzania bloku kodu do czasu, kiedy dany warunek przestanie być prawdziwy</p>
-      <p class='fragment roll-in'>Ale w tym przypadku sprawdzamy warunek już po wykonaniu się bloku kodu</p>
-      <pre>
-        <code contenteditable='true'>
-          var i = 0;
-          do {
-              console.log(i);
-          } while (i!=0);
-      </code>
-    </pre>
-  </section>
-  <section>
-    <h2>Zadania </h2>
-    <p>Wypisz na stronie elementy poniższej tablicy do elementu "stop" włącznie.</p>
-    <p>var myArray = ['uczę', 'się', 'programować', 'stop', 'lubię', 'to']</p>
-    <p><p>* Pobieraj od użytkownika liczby tak długo, aż wpiszę liczbę większą niż 50. Wtedy wyświetl tablicę złożoną z wpisanych dotychczas liczb na stronie z ostatnią włącznie</p>
-  </section>
-</section>
+        </section>
 
-<section>
-  <section>
-    <h2>Switch</h2>
-    <p>To taki nietypowy if. Pozwala na tworzenie kilku warunków na raz</p>
-    <pre>
-      <code contenteditable='true'>
-        var expr = 'jabłka'
-        switch (expr) {
-        case "Pomarancza":
-            console.log("Pomarańcze kosztują 2 zł");
-            break;
-        case "jabłka":
-            console.log("Jabłka kosztują 1 zł");
-            break;
-        case "Banan":
-            console.log("Banany kosztują 3 zł");
-            break;
-        default:
-            console.log("Nie mamy " + expr + ".");
-      }
-      </code>
-      </pre>
-    </section>
-    <section>
-      <h2>BREAK, CONTINUE</h2>
-      <p>Break przerywa działanie - zarówno pętli, zanim nasz kod się skończy, jak i instrukcji switch.</p>
-      <p>Continue powoduje natychmiastowe przejście do następnego obrotu pętli</p>
-    </section>
-    <section>
-      <h2>
-        Zadanie
-      </h2>
-      <p>Poproś użytkownika o wpisanie imienia i godziny. W alercie wyświetl użytkownikowi powitanie wraz z imieniem. Jeśli godzina wpisana przez użytkownika jest od 6 do 12, powitanie powinno brzmieć "dzień dobry", od 12 do 18 "Jak mija dzień?", od 18 do północy "Dobry wieczór", a od północy do 6 "idź spać!!!"</p>
+        <section>
+        <h4>Dodawanie tablicy do tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                var colors2 = colors.concat(['blue', 'green'])
+                colors
+                ["white", "black", "red"];
+                colors2
+                ["white", "black", "red", "blue", "green"];
+              </code>
+          </pre>
+          <p> W ten sposób dodajemy dwie tablice. Concat tworzy nową tablicę!! </p>
 
-    </section>
-  </section> 
+        </section>
 
-  <section>
-    <section>
 
-      <h2>Praca domowa - trudna</h2>
-      <iframe width="854" height="510" src="https://www.youtube.com/embed/iSHPVCBsnLw" frameborder="0" allowfullscreen></iframe>
-    </section>
-    <section>
-      <p>Stwórz funkcję, która pobierze od użytkownika jego  typ "rock paper scissors lizard spock", następnie wylosuj typ komputera i pokaż w alercie, kto wygrał. </p>
-      <img src='http://a.tgcdn.net/images/products/additional/large/db2e_lizard_spock.jpg'>
+        <section>
+        <h4>sortowanie tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors.sort()
+                colors
+                ["black", "red", "white"];
+              </code>
+          </pre>
+          <p> W ten sposób dodajemy dwie tablice. </p>
 
-    </section>
+        </section>
+
+        <section>
+        <h4>Odwracanie tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors.reverse()
+                colors
+                ["red", "black", "white"];
+              </code>
+          </pre>
+          <p> W ten sposób odwracamy tablicę. </p>
+
+        </section>
+
+          <section>
+        <h4>Długość tablicy</h4>
+          <pre>
+              <code >
+                var colors;
+                colors = ['white', 'black', 'red'];
+                colors.length;
+                3
+              </code>
+          </pre>
+        </section>
+
+
+       
   </section>
 
 
